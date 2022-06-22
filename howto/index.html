@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,none,noodp,noarchive,nosnippet,noimageindex,nocache">
+    <title>***</title>
+    <script src="../_common/umbrella.min.js" charset="utf-8"></script>
+    <style>
+        div { margin-bottom: 1.5rem; }
+        div#linkto { word-spacing: 1.2rem; }
+        div[id^="browser"] {
+            white-space: pre-wrap;
+            line-height: 1.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="linkto">
+        <a href="#browser_jane">JaneStyle</a>
+        <a href="#browser_mate">ChMate</a>
+        <a href="#browser_ciisaa">Ciisaa</a>
+        <a href="#browser_twinkle">twinkle</a>
+        <a href="#browser_siki">Siki</a>
+        <a href="#browser_bb2c">BB2C</a>
+        <a href="#browser_v2c">V2C(各バージョン)</a>
+    </div>
+    <div id="browser_jane">●JaneStyle
+ツール→設定→あぼーんのNGThreadの所に追加
+JaneStyle(NGThreadの所に登録)
+<>Be番号|Be番号|Be番号|Be番号
+の形式で<>の後に番号を書き|で繋げれば1行で複数の番号をまとめて登録できる
+※一番最初に<>を記入する必要がある
+(Be番号リストのテンプレにこの記号をまとめて入れるとレスアンカーがおかしいと言われて書き込みできないから分けて書いてある)
+※最後のBe番号の後に|記号は不要
+    </div>
+    <div id="browser_mate">●ChMate
+ChMate(NGThreadを選んで正規表現を選んで登録)
+Be番号|Be番号|Be番号|Be番号
+の形式でBe番号を|で繋げれば1行で複数の番号をまとめて登録できる
+※最後のBe番号の後に|記号は不要
+    </div>
+    <div id="browser_ciisaa">●Ciisaa
+スレ一覧から該当スレッドを長押し
+→コピー/NGワード登録をタッチ→BE番号をタッチして範囲選択(色を変える)→NGワード登録をタッチしておしまい
+    </div>
+    <div id="browser_twinkle">●twinkle
+》NG登録
+スレタイ一覧でNGしたいスレを長押し
+NGスレッドへ追加→キーワードのところに書いてあるスレタイ部分だけ消してBe番号のみの状態にして追加を押す
+
+》解除や変更は[NGスレッド設定]
+<a href="./howto_twinkle.png">https://i.imgur.com/B7ogd8f.png</a>
+左側ウインドウにスレタイが並んでるとこの枠下に
+[既読を上][勢い][スレ順][…]の横の[↑]みたいなボタン押して
+[NGスレッド設定]から
+    </div>
+    <div id="browser_siki">●Siki
+スレッドを右クリックしてミュート→記者名(#be番号)でミュートを選択
+または正規表現を使いたかったらスレッドNG/強調設定の投稿者を対象データ、対象ワードにBe番号を入れる
+    </div>
+    <div id="browser_bb2c">●BB2C
+不明、情報求む
+※諦めてアイホンならちんくる使う
+    </div>
+    <div id="browser_v2c">●V2C(各バージョン)
+まさかV2C使いでこれのやり方わからんようなやつはいないよな？
+こんなこともできんのやったら使うのやめちまえ
+    </div>
+    <script type="text/javascript">
+        (() => {
+            u('#linkto a').handle('click', e => {
+                var anchor = u(e.target).attr('href');
+                u(anchor).scroll();
+            });
+        })();
+    </script>
+</body>
+</html>

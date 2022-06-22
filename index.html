@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,none,noodp,noarchive,nosnippet,noimageindex,nocache">
+    <title>***</title>
+    <script src="./_common/umbrella.min.js" charset="utf-8"></script>
+    <style media="screen">
+        div#caution { white-space: pre-wrap; line-height: 1.7rem; }
+        div#link-page {
+            margin-top: 1.5rem;
+            line-height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="caution">■留意事項
+1)BEIDによるNGはユーザー一人一人が個々に設定するもので、ニュー速から特定のIDを排除するものではありません
+2)NGにするBEIDを勧められてもむやみにNGにせず、自分にとって無用・有害なスレばかり立てているかどうかを確認して各自の判断でNGにするかどうかを決めましょう
+　BEIDごとのスレ立て履歴は↓で確認できます
+　<a href="https://ame.hacca.jp/ttp.html">https://ame.hacca.jp/ttp.html</a>
+3)この仕組を悪用して嫌がらせや混乱を目的とし、特定のIDをNGに登録させようとする行為も見受けられるので注意してください
+4)特に一括登録できるようにNGIDを羅列している情報は、トラップの可能性があるので使わないようにしましょう
+    </div>
+    <form id="link-report">
+        スレ立て履歴検索：
+        <input type="text" maxlength="9" placeholder="BEID">
+        <button>検索</button>
+    </form>
+    <div id="link-page">
+        <!-- <a href="./templates/">テンプレート</a><br> -->
+        <a href="./howto/">設定の仕方</a><br>
+        <a href="./selector/">ID選択</a><br>
+        <a href="./regexp/">正規表現</a>
+    </div>
+    <script type="text/javascript">
+        // ----- BEIDスレ立て履歴の検索 -----
+        // 飴 ◆HACCA.6g7gAV さん、ありがとうそしてごめんなさい
+        const fnSEARCH = (e) => {
+            let r = /^\d{9}$/g;
+            let txt = u(e.currentTarget).closest('form').find('input').first().value;
+            // console.log(txt);
+            if(r.test(txt)) {
+                window.open('https://ame.hacca.jp/sasss/log-be2.cgi?i=' + txt);
+            }
+        };
+        (() => {
+            u('form#link-report').handle('submit', fnSEARCH);
+            u('form#link-report button').handle('click', fnSEARCH);
+        })();
+    </script>
+</body>
+</html>

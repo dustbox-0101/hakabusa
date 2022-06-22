@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,none,noodp,noarchive,nosnippet,noimageindex,nocache">
+    <title>***</title>
+    <script type="text/javascript" src="../_common/umbrella.min.js"></script>
+    <script type="text/javascript" src="../_common/underscore-min.js"></script>
+    <script type="text/javascript" src="../_common/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="./readTSV.js"></script>
+</head>
+<body>
+    <header id="regexp-result">
+        <input type="text" id="regexp-result-value" placeholder="選択結果" value="">
+        <div>
+            <button id="check-toggle-yumi">弓庭</button>
+            <button id="check-toggle-kenmo">嫌儲</button>
+            <button id="check-disabled-all">全クリア</button>
+        </div>
+    </header>
+    <main>
+        <article id="beid-templates">
+            <h1>テンプレ</h1>
+            <section class="header">
+                <label><input type="checkbox" id="checkable-all-templates" class="checked-all"><span>BEID</span></label>
+                <div>&nbsp;</div>
+                <p>説明</p>
+            </section>
+            <section v-for="data in lists" :key="data.id" class="list-hidden">
+                <label :class="data.css"><input type="checkbox" :value="data.id"><span>{{ data.id }}</span></label>
+                <div><a v-bind:href="'https://ame.hacca.jp/sasss/log-be2.cgi?i=' + data.id">履歴</a></div>
+                <p>{{ data.text }}</p>
+            </section>
+        </article>
+        <article id="beid-etc">
+            <h1>その他</h1>
+            <section class="header">
+                <label><input type="checkbox" id="checkable-all-templates" class="checked-all"><span>BEID</span></label>
+                <div>&nbsp;</div>
+                <p>説明</p>
+            </section>
+            <section v-for="data in lists" :key="data.id" class="list-hidden">
+                <label :class="data.css"><input type="checkbox" :value="data.id"><span>{{ data.id }}</span></label>
+                <div><a v-bind:href="'https://ame.hacca.jp/sasss/log-be2.cgi?i=' + data.id">履歴</a></div>
+                <p>{{ data.text }}</p>
+            </section>
+        </article>
+    </main>
+    <footer><button id="elevator" class="visible">上へ戻る</button></footer>
+    <script type="text/javascript" src="./bind-data.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
